@@ -1,33 +1,333 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ゼルダの伝説：中世ヨーロッパと日本の神話の融合</title>
+    <title>ゼルダの伝説：中世ヨーロッパと日本の神話の融合 - アニメ・ゲームから学ぶ歴史と文化</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
-        .container { width: 80%; margin: auto; overflow: hidden; padding: 20px; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        header { background: #333; color: #fff; padding: 1rem 0; text-align: center; }
-        header h1 { margin: 0; font-size: 2rem; }
-        nav ul { padding: 0; list-style: none; text-align: center; background: #444; margin-bottom:20px; }
-        nav ul li { display: inline; margin-right: 20px; }
-        nav ul li a { color: #fff; text-decoration: none; font-size: 1.1rem; }
-        article h1 { font-size: 1.8rem; color: #333; }
-        .content img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
-        footer { text-align: center; padding: 20px; margin-top: 20px; background: #333; color: #fff; }
+        :root {
+            --primary-color: #6a4c93;
+            --secondary-color: #ff7096;
+            --accent-color: #ffcb77;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+            --card-bg: #fff;
+            --header-bg: linear-gradient(135deg, #6a4c93 0%, #8a6db1 100%);
+            --footer-bg: #2b2d42;
+        }
+        
+        body { 
+            font-family: 'Noto Sans JP', sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+            background-color: var(--background-color); 
+            color: var(--text-color); 
+        }
+        
+        .container { 
+            width: 85%; 
+            max-width: 1200px;
+            margin: auto; 
+            overflow: hidden; 
+            padding: 30px; 
+            background-color: var(--card-bg); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+            border-radius: 10px;
+            margin-top: -30px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        header { 
+            background: var(--header-bg); 
+            color: #fff; 
+            padding: 2rem 0; 
+            text-align: center;
+            border-bottom: 5px solid var(--secondary-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        header h1 { 
+            margin: 0; 
+            font-size: 2.5rem; 
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        nav ul { 
+            padding: 0; 
+            list-style: none; 
+            text-align: center; 
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li { 
+            display: inline-block; 
+            margin: 0;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a { 
+            color: var(--primary-color); 
+            text-decoration: none; 
+            font-size: 1.1rem; 
+            display: block;
+            padding: 15px 25px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--accent-color);
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 80%;
+            left: 10%;
+        }
+        
+        article {
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        article h1 { 
+            font-size: 2.2rem; 
+            color: var(--primary-color); 
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+        
+        article h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            margin-top: 40px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        article h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+        }
+        
+        article h3 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+        }
+        
+        article p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        
+        article ul, article ol {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+        
+        article li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        article a {
+            color: var(--primary-color);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        article a:hover {
+            color: var(--secondary-color);
+            border-bottom: 1px solid var(--secondary-color);
+        }
+        
+        .content img { 
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+            margin: 25px auto; 
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        footer { 
+            text-align: center; 
+            padding: 30px 20px; 
+            margin-top: 40px; 
+            background: var(--footer-bg); 
+            color: #fff; 
+            border-top: 5px solid var(--secondary-color);
+        }
+        
+        .ad-space {
+            margin: 25px 0; 
+            text-align: center; 
+            border: 2px dashed var(--secondary-color); 
+            padding: 15px; 
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .ad-space p {
+            margin: 0; 
+            font-size: 0.9em; 
+            color: #888;
+        }
+        
+        .related-articles {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px dashed #eee;
+        }
+        
+        .related-articles h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .related-articles ul {
+            padding: 0;
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .related-articles li {
+            background: #f8f9fa;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .related-articles li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .related-articles a {
+            display: block;
+            padding: 15px;
+            color: var(--text-color);
+            text-decoration: none;
+            border-bottom: none;
+        }
+        
+        .related-articles a:hover {
+            color: var(--primary-color);
+            border-bottom: none;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 20px 15px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 0;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            nav ul li:last-child {
+                border-bottom: none;
+            }
+            
+            article h1 {
+                font-size: 1.8rem;
+            }
+            
+            article h2 {
+                font-size: 1.5rem;
+            }
+            
+            .related-articles ul {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>My Automated Content Site</h1>
+        <h1>アニメ・ゲームから学ぶ歴史と文化</h1>
+        <p>エンターテイメントの世界から紐解く、知られざる歴史の真実</p>
     </header>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <!-- Categories can be added here later -->
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="#">アニメ</a></li>
+            <li><a href="#">ゲーム</a></li>
+            <li><a href="#">歴史</a></li>
+            <li><a href="#">文化</a></li>
         </ul>
     </nav>
+
+    <div class="ad-space">
+        <p>広告スペース (ヘッダー下)</p>
+        <!-- Actual ad code would go here -->
+    </div>
+
     <div class="container">
         <article>
             <h1>ゼルダの伝説：中世ヨーロッパと日本の神話の融合</h1>
@@ -71,10 +371,25 @@
 この記事のテーマについてさらに詳しく知りたい方は、以下の書籍がおすすめです。
 * <a href="https://www.amazon.co.jp/dp/B0XXXXXXXX">歴史と文化で読み解くゼルダの伝説の世界</a>
 * <a href="https://www.amazon.co.jp/dp/B0XXXXXXXX">図説：中世ヨーロッパと日本の神話の融合</a></p>
+            
+            <div class="related-articles">
+                <h3>関連記事</h3>
+                <ul>
+                    <li><a href="デスノート_日本の死生観と正義の概念.html">デスノート：日本の死生観と正義の概念</a></li>
+                    <li><a href="ゼルダの伝説_中世ヨーロッパと日本の神話の融合.html">ゼルダの伝説：中世ヨーロッパと日本の神話の融合</a></li>
+                    <li><a href="kusuriya_herbs_article.html">薬屋のひとりごと：猫猫が愛した薬草たちの深き歴史と驚きの効能</a></li>
+                </ul>
+            </div>
         </article>
     </div>
+    
+    <div class="ad-space">
+        <p>広告スペース (フッター上)</p>
+        <!-- Actual ad code would go here -->
+    </div>
+
     <footer>
-        <p>&copy; 2025 My Automated Content Site. All rights reserved.</p>
+        <p>&copy; 2025 アニメ・ゲームから学ぶ歴史と文化. All rights reserved.</p>
     </footer>
 </body>
 </html>
