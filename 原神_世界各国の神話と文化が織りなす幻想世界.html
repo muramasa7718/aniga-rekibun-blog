@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原神：世界各国の神話と文化が織りなす幻想世界 - アニメ・ゲームから学ぶ歴史と文化</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6a4c93;
+            --secondary-color: #ff7096;
+            --accent-color: #ffcb77;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+            --card-bg: #fff;
+            --header-bg: linear-gradient(135deg, #6a4c93 0%, #8a6db1 100%);
+            --footer-bg: #2b2d42;
+        }
+        
+        body { 
+            font-family: 'Noto Sans JP', sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+            background-color: var(--background-color); 
+            color: var(--text-color); 
+        }
+        
+        .container { 
+            width: 85%; 
+            max-width: 1200px;
+            margin: auto; 
+            overflow: hidden; 
+            padding: 30px; 
+            background-color: var(--card-bg); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+            border-radius: 10px;
+            margin-top: -30px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        header { 
+            background: var(--header-bg); 
+            color: #fff; 
+            padding: 2rem 0; 
+            text-align: center;
+            border-bottom: 5px solid var(--secondary-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        header h1 { 
+            margin: 0; 
+            font-size: 2.5rem; 
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        nav ul { 
+            padding: 0; 
+            list-style: none; 
+            text-align: center; 
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li { 
+            display: inline-block; 
+            margin: 0;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a { 
+            color: var(--primary-color); 
+            text-decoration: none; 
+            font-size: 1.1rem; 
+            display: block;
+            padding: 15px 25px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--accent-color);
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 80%;
+            left: 10%;
+        }
+        
+        article {
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        article h1 { 
+            font-size: 2.2rem; 
+            color: var(--primary-color); 
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+        
+        article h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            margin-top: 40px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        article h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+        }
+        
+        article h3 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+        }
+        
+        article p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        
+        article ul, article ol {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+        
+        article li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        article a {
+            color: var(--primary-color);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        article a:hover {
+            color: var(--secondary-color);
+            border-bottom: 1px solid var(--secondary-color);
+        }
+        
+        .content img { 
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+            margin: 25px auto; 
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        footer { 
+            text-align: center; 
+            padding: 30px 20px; 
+            margin-top: 40px; 
+            background: var(--footer-bg); 
+            color: #fff; 
+            border-top: 5px solid var(--secondary-color);
+        }
+        
+        .ad-space {
+            margin: 25px 0; 
+            text-align: center; 
+            border: 2px dashed var(--secondary-color); 
+            padding: 15px; 
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .ad-space p {
+            margin: 0; 
+            font-size: 0.9em; 
+            color: #888;
+        }
+        
+        .related-articles {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px dashed #eee;
+        }
+        
+        .related-articles h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .related-articles ul {
+            padding: 0;
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .related-articles li {
+            background: #f8f9fa;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .related-articles li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .related-articles a {
+            display: block;
+            padding: 15px;
+            color: var(--text-color);
+            text-decoration: none;
+            border-bottom: none;
+        }
+        
+        .related-articles a:hover {
+            color: var(--primary-color);
+            border-bottom: none;
+        }
+        
+        .product-section {
+            background: #f9f5ff;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 40px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .product-section h2 {
+            color: #6a4c93;
+            border-bottom: 2px solid #ff7096;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .product-category {
+            margin-bottom: 30px;
+        }
+        
+        .product-category h3 {
+            background: #eee4ff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        .product-item {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .product-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .product-item h4 {
+            color: #6a4c93;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .product-item p {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        
+        .product-item ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .product-item li {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .product-link {
+            display: inline-block;
+            background: #ff7096;
+            color: white !important;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            border-bottom: none !important;
+        }
+        
+        .product-link:hover {
+            background: #6a4c93;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            border-bottom: none !important;
+        }
+        
+        .product-note {
+            font-size: 0.85rem;
+            color: #777;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px dashed #ddd;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 20px 15px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 0;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            nav ul li:last-child {
+                border-bottom: none;
+            }
+            
+            article h1 {
+                font-size: 1.8rem;
+            }
+            
+            article h2 {
+                font-size: 1.5rem;
+            }
+            
+            .related-articles ul {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>アニメ・ゲームから学ぶ歴史と文化</h1>
+        <p>エンターテイメントの世界から紐解く、知られざる歴史の真実</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="#">アニメ</a></li>
+            <li><a href="#">ゲーム</a></li>
+            <li><a href="#">歴史</a></li>
+            <li><a href="#">文化</a></li>
+        </ul>
+    </nav>
+
+    <div class="ad-space">
+        <!-- Google AdSense広告 (ヘッダー下) -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1234567890123456"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <div class="container">
+        <article>
+            <h1>原神：世界各国の神話と文化が織りなす幻想世界</h1>
+
+            <h2>はじめに</h2>
+            <p>『原神』は中国のmiHoYo（現HoYoverse）が開発した、美しいオープンワールドを舞台にした冒険RPGです。プレイヤーは「旅人」となり、テイワットと呼ばれる幻想世界を旅しながら、失った血縁者を探す旅に出ます。この記事では、『原神』の世界観を彩る神話的背景と、各地域に反映された現実世界の文化的要素について深掘りしていきます。</p>
+
+            <p>『原神』の魅力の一つは、現実世界の多様な文化や神話を巧みに取り入れた世界設定にあります。七つの元素が絡み合う幻想世界「テイワット」には、それぞれ特徴的な七つの国が存在し、各国は現実世界の特定の国や文化圏をモチーフとしています。また、ゲーム内の神々や伝説には、世界各国の神話や伝承が色濃く反映されています。</p>
+
+            <h2>テイワットの世界観と七神</h2>
+            <p>テイワットは七柱の神（七神）が統治する大陸で、各神はそれぞれの元素と理念に関連付けられています。七神は約2,000年前に終結した「魔神戦争」の勝者として君臨するようになりました。</p>
+
+            <h3>七神と七国の概要</h3>
+            <ol>
+                <li><strong>風神バルバトス（モンド）</strong>
+                    <ul>
+                        <li>理念：「自由」</li>
+                        <li>元素：風</li>
+                        <li>特徴：「神の去った地」と呼ばれ、神の姿を見ることがない</li>
+                    </ul>
+                </li>
+                <li><strong>岩神モラクス（璃月）</strong>
+                    <ul>
+                        <li>理念：「契約」</li>
+                        <li>元素：岩</li>
+                        <li>特徴：「神と共にある地」、神託により繁栄を謳歌する</li>
+                    </ul>
+                </li>
+                <li><strong>雷神バアル（稲妻）</strong>
+                    <ul>
+                        <li>理念：「永遠」</li>
+                        <li>元素：雷</li>
+                        <li>特徴：「神が統べる地」、神を絶対的な君主とする</li>
+                    </ul>
+                </li>
+                <li><strong>草神ブエル（スメール）</strong>
+                    <ul>
+                        <li>理念：「知恵」</li>
+                        <li>元素：草</li>
+                        <li>特徴：「神の死した地」、新たな神が根付かない</li>
+                    </ul>
+                </li>
+                <li><strong>水神フォカロルス（フォンテーヌ）</strong>
+                    <ul>
+                        <li>理念：「正義」</li>
+                        <li>元素：水</li>
+                        <li>特徴：「神に溺れし地」、神による栄華に浸る</li>
+                    </ul>
+                </li>
+                <li><strong>炎神ハボリム（ナタ）</strong>
+                    <ul>
+                        <li>理念：「戦争」</li>
+                        <li>元素：炎</li>
+                        <li>特徴：「神の居ない地」、神の名を継ぐ人間が深淵と争う</li>
+                    </ul>
+                </li>
+                <li><strong>氷神（スネージナヤ）</strong>
+                    <ul>
+                        <li>理念：未公開</li>
+                        <li>元素：氷</li>
+                        <li>特徴：敵対組織「ファデュイ」の本拠地</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>テイワットの歴史</h3>
+            <p>テイワットの歴史は大きく分けて以下のような時代に区分されます：</p>
+            <ul>
+                <li><strong>魔神戦争以前</strong>：多くの神々と魔神がこの地を闊歩し、覇権をめぐって争っていた時代</li>
+                <li><strong>魔神戦争（約2,000年前）</strong>：七神の前身となる神々が勝利し、テイワットの統治体制が確立</li>
+                <li><strong>災厄（500年前）</strong>：カーンルイアの破壊により引き起こされた大災害。複数の神が亡くなり、新たな神に取って代わられた</li>
+                <li><strong>現代</strong>：旅人がテイワットに降り立ち、冒険を始める時代</li>
+            </ul>
+
+            <h2>中国神話・伝説と『原神』の関連性</h2>
+            <p>『原神』の世界設計、特に璃月地域には中国の伝統的な神話や伝説が色濃く反映されています。</p>
+
+            <h3>璃月と中国の山岳信仰</h3>
+            <p>璃月地域は中国の伝統的な山岳信仰と道教の影響を強く受けており、特に「五岳信仰」を下地としてデザインされています。五岳とは、陰陽五行説に基づいて道教において聖山とされる5つの山（東岳泰山・南岳衡山・中岳嵩山・西岳華山・北岳恒山）のことです。</p>
+
+            <p>璃月の地名と五岳信仰の対応関係は以下の通りです：</p>
+            <ul>
+                <li><strong>天衡山</strong> - 南岳「衡山」と張家界の天門山がモチーフ</li>
+                <li><strong>南天門</strong> - 西遊記に登場する天界の出入口</li>
+                <li><strong>太山府/泰山府</strong> - 東岳「泰山」がモチーフ</li>
+                <li><strong>慶雲頂</strong> - 西岳「華山」がモチーフ</li>
+                <li><strong>望舒旅館</strong> - 北岳「恒山」の懸空寺がモチーフ</li>
+            </ul>
+
+            <h3>崑崙山と来歆山の関係</h3>
+            <p>璃月の「来歆山」は中国神話における「崑崙山」をモチーフとしています。崑崙山は中国神話において、西方にあり、玉を産出し、仙人たちが住む聖なる山とされています。「陸吾」と「開明獣」という神獣が守護しているとされ、璃月の来歆山にも同名のボスが存在します。</p>
+
+            <h3>仙人思想と璃月のキャラクター</h3>
+            <p>仙人とは、修行により不老不死を体得した伝説上の超人的存在を指します。古代中国において、不老不死を求める人々の理想的存在であり、主に道教の信仰対象とされてきました。</p>
+
+            <p>璃月には多くの仙人・仙獣が登場し、その多くは中国神話に基づいています：</p>
+            <ul>
+                <li><strong>甘雨</strong> - 麒麟の血を引く半仙獣</li>
+                <li><strong>煙緋</strong> - 獬豸（かいち）の血を引く半仙獣</li>
+                <li><strong>魈</strong> - 夜叉一族（仙獣の一種）</li>
+                <li><strong>留雲・理水</strong> - 鶴の姿をした仙人</li>
+                <li><strong>削月</strong> - 鹿の姿をした仙人</li>
+            </ul>
+
+            <p>中国の伝統では、鶴と鹿は長寿のシンボルとされ、仙人と深い関係があるとされています。『列仙伝』や『八仙過海』などの伝説では、仙人は鶴に乗って移動するとされ、『抱朴子』や『述異記』などの古典では鹿は千年の寿命を持つとされています。</p>
+
+            <h3>鍾離（岩神モラクス）と黄帝の関連性</h3>
+            <p>鍾離（岩神モラクス）のキャラクター設定には、中国神話の「黄帝」との類似点が多く見られます：</p>
+            <ul>
+                <li><strong>土元素との関連</strong>：黄帝は五行思想において「土」を象徴し、鍾離は岩元素（土に相当）の神</li>
+                <li><strong>龍の姿</strong>：黄帝は龍の姿を持ち、鍾離も龍の姿を持つ</li>
+                <li><strong>文明の始祖</strong>：黄帝は中国文明の始祖、鍾離は璃月の始祖</li>
+                <li><strong>契約の概念</strong>：黄帝は応龍と「契約」を結んで蚩尤を打倒し、鍾離は「契約」の神として璃月を統治</li>
+            </ul>
+
+            <p>また、「鍾離」という名は八仙の一人である「鍾離権」から引用されています。八仙は道教における代表的な仙人のグループです。</p>
+
+            <h3>璃月七星と北斗七星の関連</h3>
+            <p>璃月七星の役職名（天権、玉衡など）は北斗七星に由来しています。北斗七星は道教において「北斗星君」として崇められ、人の功罪を調べ裁く神とされています。璃月七星も法律と秩序を担当する組織として設定されています。</p>
+
+            <h2>ゲーム内各地域と現実世界の文化・歴史との関係</h2>
+            <p>『原神』の各地域は、それぞれ現実世界の特定の国や文化圏をモチーフとしており、建築様式、衣装、習慣、言語などに反映されています。</p>
+
+            <h3>モンド - 中世ヨーロッパ（特にドイツ）</h3>
+            <p>モンドは中世ヨーロッパ、特にドイツをモチーフとした「自由」の国です。</p>
+
+            <p><strong>文化的特徴</strong>:</p>
+            <ul>
+                <li><strong>建築様式</strong>: ドイツのゴシック様式、中世の城塞都市</li>
+                <li><strong>名称の由来</strong>: ドイツ語で「Mond」は「月」を意味する</li>
+                <li><strong>食文化</strong>: スパゲッティやピザなどのイタリア料理の影響も見られる</li>
+                <li><strong>地理的特徴</strong>: ドラゴンスパイン地方はスイスやイタリア北部のアルプス山脈がモデル</li>
+            </ul>
+
+            <p><strong>歴史的背景</strong>:</p>
+            <ul>
+                <li>風神バルバトスによる専制君主デカラビアンの打倒は、中世ヨーロッパにおける絶対王政から自由・民主主義への移行を象徴</li>
+                <li>騎士団の存在は中世ヨーロッパの騎士道精神を反映</li>
+            </ul>
+
+            <h3>璃月 - 古代〜中世中国</h3>
+            <p>璃月は古代から中世にかけての中国をモチーフとした「契約」の国です。</p>
+
+            <p><strong>文化的特徴</strong>:</p>
+            <ul>
+                <li><strong>建築様式</strong>: 中国の伝統的な建築様式（宮殿、亭、楼閣など）</li>
+                <li><strong>地理的特徴</strong>: 
+                    <ul>
+                        <li>珉林エリアは張家界や五岳がモデル</li>
+                        <li>沈玉の谷は安徽省の黄山周辺地域と徽州建築がモデル</li>
+                        <li>荻花州は桂林がモデル</li>
+                    </ul>
+                </li>
+                <li><strong>社会制度</strong>: 商業と契約を重んじる文化は、古代中国の商業都市や「契約」を重視した法制度を反映</li>
+            </ul>
+
+            <p><strong>神話的背景</strong>:</p>
+            <ul>
+                <li>道教の仙人思想や山岳信仰が色濃く反映</li>
+                <li>崑崙山、八仙、四神獣など中国神話の要素が多数登場</li>
+            </ul>
+
+            <h3>稲妻 - 江戸時代の日本</h3>
+            <p>稲妻は江戸時代を中心とした日本をモチーフとした「永遠」の国です。</p>
+
+            <p><strong>文化的特徴</strong>:</p>
+            <ul>
+                <li><strong>建築様式</strong>: 日本の伝統的な建築（神社、城、町家など）</li>
+                <li><strong>地理的特徴</strong>: 日本の島国としての特徴を反映、火山や温泉などの地形も日本に類似</li>
+                <li><strong>社会制度</strong>: 
+                    <ul>
+                        <li>「鎖国令」は江戸時代の鎖国政策を反映</li>
+                        <li>三奉行制度は江戸幕府の政治体制に類似</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p><strong>歴史的背景</strong>:</p>
+            <ul>
+                <li>雷電将軍の「永遠」を追求する姿勢は、日本の伝統的な価値観である「不変」や「永続性」を反映</li>
+                <li>稲妻の内戦は明治維新や幕末の動乱を想起させる</li>
+                <li>海祇島の民は琉球文化の影響が見られる</li>
+            </ul>
+
+            <h3>スメール - 中東・南アジア文明</h3>
+            <p>スメールは古代エジプト、ペルシア、中東、インドなどをモチーフとした「知恵」の国です。</p>
+
+            <p><strong>文化的特徴</strong>:</p>
+            <ul>
+                <li><strong>建築様式</strong>: 
+                    <ul>
+                        <li>砂漠地域はエジプト・中東の建築様式</li>
+                        <li>森林地域はインド・東南アジアの建築様式</li>
+                    </ul>
+                </li>
+                <li><strong>地理的特徴</strong>: 砂漠と熱帯雨林の対比は、中東の砂漠地帯とインド・東南アジアの熱帯地域を反映</li>
+                <li><strong>社会制度</strong>: 学者を重んじる文化は、古代中東やインドの学問・知識を重視する伝統を反映</li>
+            </ul>
+
+            <p><strong>歴史的背景</strong>:</p>
+            <ul>
+                <li>「禁忌の知識」をめぐる争いは、古代文明における知識と権力の関係を象徴</li>
+                <li>アケーデミヤの学術機関としての位置づけは、古代アレクサンドリア図書館やナーランダ大学などの古代の学術機関を想起させる</li>
+            </ul>
+
+            <h3>フォンテーヌ - 19世紀後期の西ヨーロッパ</h3>
+            <p>フォンテーヌは19世紀後期のフランス、イギリス、イタリアをモチーフとした「正義」の国です。</p>
+
+            <p><strong>文化的特徴</strong>:</p>
+            <ul>
+                <li><strong>建築様式</strong>: 19世紀の西ヨーロッパ、特にフランスのベル・エポック期の建築様式</li>
+                <li><strong>地理的特徴</strong>: パリを思わせる都市設計、水路が張り巡らされたヴェネツィアの影響</li>
+                <li><strong>社会制度</strong>: 裁判所と法律を重視する社会は、近代西欧の法治国家の概念を反映</li>
+                <li><strong>技術水準</strong>: 産業革命期の蒸気機関や機械技術の発展を反映</li>
+            </ul>
+
+            <p><strong>歴史的背景</strong>:</p>
+            <ul>
+                <li>水神と人間の関係性は、産業革命期の自然と人間の関係の変化を象徴</li>
+                <li>「正義」の概念をめぐる葛藤は、近代法制度の発展と矛盾を表現</li>
+            </ul>
+
+            <h3>ナタ - 南北アメリカ・アフリカ・オセアニア</h3>
+            <p>ナタはアステカ文明を中心に、南北アメリカ、アフリカ、オセアニアの文化をモチーフとした「戦争」の国です。</p>
+
+            <p><strong>文化的特徴</strong>:</p>
+            <ul>
+                <li><strong>建築様式</strong>: アステカやマヤなどの中南米先住民の建築様式</li>
+                <li><strong>地理的特徴</strong>: 火山や熱帯地域、砂漠など多様な地形が混在</li>
+                <li><strong>社会制度</strong>: 部族社会と戦士文化は先住民族の社会構造を反映</li>
+            </ul>
+
+            <p><strong>歴史的背景</strong>:</p>
+            <ul>
+                <li>「神の居ない地」という設定は、植民地化によって伝統的な信仰体系が崩壊した歴史を想起させる</li>
+                <li>「戦争」の理念は、生存のための闘争や征服の歴史を象徴</li>
+            </ul>
+
+            <h3>スネージナヤ - ロシアを中心とした東ヨーロッパ</h3>
+            <p>スネージナヤはロシアを中心とした東ヨーロッパをモチーフとした国です。理念は未公開です。</p>
+
+            <p><strong>文化的特徴</strong>:</p>
+            <ul>
+                <li><strong>名称の由来</strong>: ロシア語で「雪の」を意味する「снежная」（スネージナヤ）から</li>
+                <li><strong>地理的特徴</strong>: 極寒の地という設定はシベリアなどの北方ロシアを想起させる</li>
+                <li><strong>組織</strong>: 「ファデュイ」という組織名はロシア語の「Фатуи」（運命の人々）に由来</li>
+            </ul>
+
+            <h2>『原神』の言語と文字システム</h2>
+            <p>テイワットには共通語が存在しますが、各国独自の言語・文字も存在します：</p>
+            <ul>
+                <li><strong>璃月文字</strong>: 変形した中国語</li>
+                <li><strong>稲妻文字</strong>: 母音のみの日本語</li>
+                <li><strong>スメール文字</strong>: 記号化された英語</li>
+            </ul>
+
+            <p>また、共通通貨「モラ」が全地域で使用され、璃月の造幣局「黄金屋」で製造されています。元々は物質転換の媒体だったものを貨幣に転用したという設定です。</p>
+
+            <h2>まとめ</h2>
+            <p>『原神』の世界「テイワット」は、現実世界の多様な文化や神話を巧みに取り入れた幻想世界です。特に中国の伝統的な神話や道教の影響が色濃く反映されており、各地域は現実世界の特定の国や文化圏をモチーフとしています。</p>
+
+            <p>このような多文化的な世界設定は、プレイヤーに様々な文化や歴史に触れる機会を提供するとともに、ゲームの世界観に深みと魅力を与えています。『原神』の冒険を通じて、現実世界の多様な文化や神話に興味を持つきっかけになれば幸いです。</p>
+
+            <div class="product-section">
+                <h2>『原神』関連おすすめ商品リスト</h2>
+                <p>『原神』の世界観をより深く楽しむための公式グッズや関連商品をご紹介します。すべて正規品・公式ライセンス商品ですので、安心してお求めいただけます。</p>
+
+                <div class="product-category">
+                    <h3>公式アートブック・書籍</h3>
+                    
+                    <div class="product-item">
+                        <h4>原神イラスト集 Vol.1</h4>
+                        <p>美麗なキャラクターイラストや風景画など、『原神』の世界観を堪能できる公式アートブック。モンド、璃月、稲妻のキャラクターや風景を中心に収録。</p>
+                        <ul>
+                            <li>出版社: KADOKAWA</li>
+                            <li>発売日: 2022年10月28日</li>
+                            <li>ページ数: 176ページ</li>
+                        </ul>
+                        <a href="https://amzn.to/4mq0qy8" class="product-link" target="_blank">Amazonで購入する</a>
+                    </div>
+                    
+                    <div class="product-item">
+                        <h4>原神イラスト集 Vol.2</h4>
+                        <p>第2弾となる公式アートブック。スメール、フォンテーヌのキャラクターや風景を中心に、公式宣伝画像やお祝いイラストなど約200点を収録。</p>
+                        <ul>
+                            <li>出版社: KADOKAWA</li>
+                            <li>発売日: 2024年4月2日</li>
+                            <li>ページ数: 192ページ</li>
+                        </ul>
+                        <a href="https://amzn.to/3F0DMf1" class="product-link" target="_blank">Amazonで購入する</a>
+                    </div>
+                    
+                    <div class="product-item">
+                        <h4>原神 ファンブック</h4>
+                        <p>ゲームの世界観や設定資料、開発秘話などが詰まった公式ファンブック。テイワットの歴史や文化についての詳細な解説も収録。</p>
+                        <ul>
+                            <li>出版社: KADOKAWA</li>
+                            <li>発売日: 2023年4月28日</li>
+                            <li>ページ数: 224ページ</li>
+                        </ul>
+                        <a href="https://amzn.to/3GZPvec" class="product-link" target="_blank">Amazonで購入する</a>
+                    </div>
+                </div>
+
+                <div class="product-category">
+                    <h3>フィギュア</h3>
+                    
+                    <div class="product-item">
+                        <h4>ねんどろいど 『原神』 雷電将軍</h4>
+                        <p>稲妻の雷神、雷電将軍のねんどろいどフィギュア。可愛らしいデフォルメながら、細部まで精巧に作り込まれています。</p>
+                        <ul>
+                            <li>メーカー: グッドスマイルカンパニー</li>
+                            <li>スケール: ノンスケール</li>
+                            <li>サイズ: 約10cm</li>
+                        </ul>
+                        <a href="https://amzn.to/3GWLO9l" class="product-link" target="_blank">Amazonで購入する</a>
+                    </div>
+                    
+                    <div class="product-item">
+                        <h4>原神 シトラリ・白星黒曜Ver. 1/8 完成品フィギュア</h4>
+                        <p>スメールの草神、ナヒーダ（シトラリ）の精巧なフィギュア。白星黒曜の衣装を身にまとった姿が美しく再現されています。</p>
+                        <ul>
+                            <li>メーカー: miHoYo</li>
+                            <li>スケール: 1/8</li>
+                            <li>発売予定: 2026年1月</li>
+                        </ul>
+                        <a href="https://www.animate-onlineshop.jp/pn/pd/3132248/" class="product-link" target="_blank">アニメイトで予約する</a>
+                    </div>
+                    
+                    <div class="product-item">
+                        <h4>原神 七天神像</h4>
+                        <p>テイワットの七神を祀る神像のレプリカ。ゲーム内で重要な役割を果たす七天神像を手元に置いて楽しめます。</p>
+                        <ul>
+                            <li>メーカー: miHoYo</li>
+                            <li>サイズ: 約15cm</li>
+                        </ul>
+                        <a href="https://amzn.to/4mt2c1C" class="product-link" target="_blank">Amazonで購入する</a>
+                    </div>
+                </div>
+
+                <div class="product-category">
+                    <h3>サウンドトラック</h3>
+                    
+                    <div class="product-item">
+                        <h4>原神-寂々たる無妄の国 (Original Game Soundtrack)</h4>
+                        <p>稲妻地域のBGMを収録した公式サウンドトラック。和風の美しいメロディが特徴です。</p>
+                        <ul>
+                            <li>アーティスト: HOYO-MiX, Yu-Peng Chen</li>
+                            <li>発売日: 2021年9月</li>
+                            <li>収録曲数: 62曲</li>
+                        </ul>
+                        <a href="https://amzn.to/4mnXxxN" class="product-link" target="_blank">Amazonで購入する</a>
+                    </div>
+                    
+                    <div class="product-item">
+                        <h4>原神-風と異郷人 (Original Game Soundtrack)</h4>
+                        <p>モンド地域のBGMを収録した公式サウンドトラック。中世ヨーロッパの雰囲気を感じさせる壮大な曲調が特徴です。</p>
+                        <ul>
+                            <li>アーティスト: HOYO-MiX, Yu-Peng Chen</li>
+                            <li>発売日: 2020年11月</li>
+                            <li>収録曲数: 63曲</li>
+                        </ul>
+                        <a href="https://amzn.to/43s6Q7b" class="product-link" target="_blank">Amazonで購入する</a>
+                    </div>
+                </div>
+
+                <div class="product-category">
+                    <h3>その他のグッズ</h3>
+                    
+                    <div class="product-item">
+                        <h4>原神 キャラアクリルスタンドコレクション</h4>
+                        <p>お気に入りのキャラクターのアクリルスタンド。デスクに飾って『原神』の世界を身近に感じられます。</p>
+                        <ul>
+                            <li>メーカー: miHoYo</li>
+                            <li>サイズ: 約10cm</li>
+                        </ul>
+                        <a href="https://www.animate-onlineshop.jp/animetitle/?aid=14521" class="product-link" target="_blank">アニメイトで購入する</a>
+                    </div>
+                    
+                    <div class="product-item">
+                        <h4>原神 クリスタルトップアップ（ゲーム内通貨）</h4>
+                        <p>ゲーム内で使用できる「創世結晶」をチャージするためのギフトカード。欲しいキャラクターやアイテムの入手に役立ちます。</p>
+                        <ul>
+                            <li>発行: miHoYo</li>
+                            <li>プラットフォーム: PC/PS4/PS5/モバイル</li>
+                        </ul>
+                        <a href="https://genshin.hoyoverse.com/ja/gift" class="product-link" target="_blank">公式サイトで購入する</a>
+                    </div>
+                </div>
+
+                <p class="product-note">※価格は変動する場合があります。最新の価格は各販売サイトでご確認ください。<br>※アフィリエイトリンクを含みます。購入時に価格の一部が当サイトの運営費となります。</p>
+            </div>
+
+            <h2>参考文献</h2>
+            <ol>
+                <li>原神 Wiki - 七神: <a href="https://genshin-impact.fandom.com/ja/wiki/%E4%B8%83%E7%A5%9E" target="_blank">https://genshin-impact.fandom.com/ja/wiki/%E4%B8%83%E7%A5%9E</a></li>
+                <li>ピクシブ百科事典 - テイワット: <a href="https://dic.pixiv.net/a/%E3%83%86%E3%82%A4%E3%83%AF%E3%83%83%E3%83%88" target="_blank">https://dic.pixiv.net/a/%E3%83%86%E3%82%A4%E3%83%AF%E3%83%83%E3%83%88</a></li>
+                <li>「璃月モチーフと中国の山岳信仰[原神]」 - Hanaのnote: <a href="https://note.com/softlylonely01/n/n7ae6e23cefb9" target="_blank">https://note.com/softlylonely01/n/n7ae6e23cefb9</a></li>
+                <li>「【原神】仙人の豆知識」 - 原神漢字研究所: <a href="https://note.com/genshin_kanji/n/n912f380c574a" target="_blank">https://note.com/genshin_kanji/n/n912f380c574a</a></li>
+                <li>「【原神考察＆解説】道教で解き明かす『全ての契約』の意味」 - ИOVA: <a href="https://note.com/sirotume328/n/n04cc52ac7dfa" target="_blank">https://note.com/sirotume328/n/n04cc52ac7dfa</a></li>
+                <li>HoYoLAB「各国のモチーフとなった地方解説」: <a href="https://www.hoyolab.com/article/31443762" target="_blank">https://www.hoyolab.com/article/31443762</a></li>
+            </ol>
+            
+            <div class="related-articles">
+                <h3>関連記事</h3>
+                <ul>
+                    <li><a href="デスノート_日本の死生観と正義の概念.html">デスノート：日本の死生観と正義の概念</a></li>
+                    <li><a href="ゼルダの伝説_中世ヨーロッパと日本の神話の融合.html">ゼルダの伝説：中世ヨーロッパと日本の神話の融合</a></li>
+                    <li><a href="鬼滅の刃_大正時代の日本社会と伝統文化.html">鬼滅の刃：大正時代の日本社会と伝統文化</a></li>
+                    <li><a href="ウィッチウォッチ_魔女の歴史と世界各国の魔法文化.html">ウィッチウォッチ：魔女の歴史と世界各国の魔法文化</a></li>
+                </ul>
+            </div>
+        </article>
+    </div>
+    
+    <div class="ad-space">
+        <!-- Google AdSense広告 (フッター上) -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1234567890123456"
+             data-ad-slot="9876543210"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 アニメ・ゲームから学ぶ歴史と文化. All rights reserved.</p>
+    </footer>
+</body>
+</html>
