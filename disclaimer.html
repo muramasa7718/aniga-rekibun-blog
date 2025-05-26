@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1728599695179564"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="アニメ・ゲームから学ぶ歴史と文化ブログの免責事項です。当サイトの利用に関する注意事項や著作権情報について説明しています。">
+    <title>免責事項 - アニメ・ゲームから学ぶ歴史と文化</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6a4c93;
+            --secondary-color: #ff7096;
+            --accent-color: #ffcb77;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+            --card-bg: #fff;
+            --header-bg: linear-gradient(135deg, #6a4c93 0%, #8a6db1 100%);
+            --footer-bg: #2b2d42;
+        }
+        
+        body { 
+            font-family: 'Noto Sans JP', sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+            background-color: var(--background-color); 
+            color: var(--text-color); 
+        }
+        
+        .container { 
+            width: 85%; 
+            max-width: 1200px;
+            margin: auto; 
+            overflow: hidden; 
+            padding: 30px; 
+            background-color: var(--card-bg); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+            border-radius: 10px;
+            margin-top: -30px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        header { 
+            background: var(--header-bg); 
+            color: #fff; 
+            padding: 2rem 0; 
+            text-align: center;
+            border-bottom: 5px solid var(--secondary-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        header h1 { 
+            margin: 0; 
+            font-size: 2.5rem; 
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        nav ul { 
+            padding: 0; 
+            list-style: none; 
+            text-align: center; 
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li { 
+            display: inline-block; 
+            margin: 0;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a { 
+            color: var(--primary-color); 
+            text-decoration: none; 
+            font-size: 1.1rem; 
+            display: block;
+            padding: 15px 25px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--accent-color);
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 80%;
+            left: 10%;
+        }
+        
+        article {
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        article h1 { 
+            font-size: 2.2rem; 
+            color: var(--primary-color); 
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+        
+        article h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            margin-top: 40px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        article h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+        }
+        
+        article h3 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+        }
+        
+        article p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        
+        article ul, article ol {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+        
+        article li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        article a {
+            color: var(--primary-color);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        article a:hover {
+            color: var(--secondary-color);
+            border-bottom: 1px solid var(--secondary-color);
+        }
+        
+        .content img { 
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+            margin: 25px auto; 
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        footer { 
+            text-align: center; 
+            padding: 30px 20px; 
+            margin-top: 40px; 
+            background: var(--footer-bg); 
+            color: #fff; 
+            border-top: 5px solid var(--secondary-color);
+        }
+        
+        .ad-space {
+            margin: 25px 0; 
+            text-align: center; 
+            border: 2px dashed var(--secondary-color); 
+            padding: 15px; 
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .ad-space p {
+            margin: 0; 
+            font-size: 0.9em; 
+            color: #888;
+        }
+        
+        .policy-links {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .policy-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .policy-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 20px 15px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 0;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            nav ul li:last-child {
+                border-bottom: none;
+            }
+            
+            article h1 {
+                font-size: 1.8rem;
+            }
+            
+            article h2 {
+                font-size: 1.5rem;
+            }
+            
+            .policy-links {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>アニメ・ゲームから学ぶ歴史と文化</h1>
+        <p>エンターテイメントの世界から紐解く、知られざる歴史の真実</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="#">アニメ</a></li>
+            <li><a href="#">ゲーム</a></li>
+            <li><a href="#">歴史</a></li>
+            <li><a href="#">文化</a></li>
+            <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+            <li><a href="disclaimer.html">免責事項</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <article>
+            <h1>免責事項</h1>
+
+            <h2>はじめに</h2>
+            <p>「アニメ・ゲームから学ぶ歴史と文化」（以下、「当サイト」）をご利用いただきありがとうございます。当サイトのご利用にあたっては、以下の免責事項に同意いただいたものとみなします。</p>
+
+            <h2>情報の正確性について</h2>
+            <p>当サイトのコンテンツは、可能な限り正確な情報を提供するよう努めておりますが、その完全性、正確性、最新性、有用性等について、いかなる保証もいたしかねます。情報が古くなっている場合や、誤りを含む場合もございますので、ご了承ください。</p>
+            <p>当サイトの情報を利用することで生じたいかなる損害についても、当サイト管理者は責任を負いかねます。重要な判断をされる際には、公式情報や専門家の助言を参考にされることをお勧めします。</p>
+
+            <h2>著作権・知的財産権について</h2>
+            <p>当サイトに掲載されているすべてのコンテンツ（文章、画像、デザイン等）の著作権は、当サイト管理者または正当な権利者に帰属します。</p>
+            <p>当サイトのコンテンツを、以下の行為で利用することを禁止します：</p>
+            <ol>
+                <li>商用目的での無断転載・複製</li>
+                <li>内容の改変</li>
+                <li>二次配布</li>
+                <li>その他、著作権法で認められていない行為</li>
+            </ol>
+            <p>引用の範囲を超えて当サイトのコンテンツを利用する場合は、事前に当サイト管理者の許可を得てください。</p>
+
+            <h2>外部リンクについて</h2>
+            <p>当サイトには、外部サイトへのリンクが含まれています。リンク先のウェブサイトの内容やサービスについては、当サイト管理者は責任を負いかねます。リンク先のサイトのご利用は、お客様自身の責任において行ってください。</p>
+
+            <h2>広告について</h2>
+            <p>当サイトでは、第三者配信の広告サービス（Google AdSenseなど）を利用しています。広告内容やリンク先については、当サイト管理者は関与しておらず、その内容について責任を負いかねます。広告のクリックやそれに伴うサービスの利用は、お客様自身の判断と責任において行ってください。</p>
+
+            <h2>アフィリエイトプログラムについて</h2>
+            <p>当サイトは、Amazon.co.jpを宣伝しリンクすることによってサイトが紹介料を獲得できる手段を提供することを目的に設定されたアフィリエイトプログラムである、Amazonアソシエイト・プログラムの参加者です。</p>
+            <p>当サイトで紹介している商品は、管理人が独自に選定したものであり、紹介している商品の品質や効果を保証するものではありません。商品の購入は、お客様自身の判断と責任において行ってください。</p>
+
+            <h2>コメント・投稿について</h2>
+            <p>当サイトでは、読者からのコメントや投稿を受け付ける場合があります。コメントや投稿の内容に関しては、投稿者が全責任を負うものとします。以下のような内容を含むコメントや投稿は、予告なく削除する場合があります：</p>
+            <ol>
+                <li>他者を誹謗中傷する内容</li>
+                <li>公序良俗に反する内容</li>
+                <li>違法行為を助長する内容</li>
+                <li>著作権やプライバシーを侵害する内容</li>
+                <li>広告・宣伝を目的とする内容</li>
+                <li>その他、当サイト管理者が不適切と判断する内容</li>
+            </ol>
+
+            <h2>準拠法と管轄裁判所</h2>
+            <p>本免責事項は日本法に準拠し、解釈されるものとします。当サイトの利用に関して紛争が生じた場合には、東京地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+
+            <h2>免責事項の変更</h2>
+            <p>当サイトは、必要に応じて本免責事項を変更することがあります。変更があった場合は、当ページにて告知いたします。定期的に本ページをご確認いただくことをお勧めします。</p>
+
+            <h2>お問い合わせ</h2>
+            <p>本免責事項に関するご質問やご意見は、以下の連絡先までお寄せください：</p>
+            <p>メールアドレス: info@aniga-rekibun-blog.com</p>
+
+            <p>最終更新日: 2025年5月26日</p>
+
+            <div class="policy-links">
+                <a href="privacy_policy.html">プライバシーポリシー</a>
+                <a href="disclaimer.html">免責事項</a>
+                <a href="index.html">ホームに戻る</a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 アニメ・ゲームから学ぶ歴史と文化. All rights reserved.</p>
+    </footer>
+</body>
+</html>
